@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<div>
+		<form method="POST">
+			{% csrf_token%}
+			<div class="row">
+				<div class="col-lg-6">
+					<input type="text" name="message-name" class="form-control mb-30" placeholder="Your Name">
+				</div>
+				<div class="col-lg-6">
+					<input type="email" name="message-email"class="form-control mb-30" placeholder="Email">
+				</div>
+				<div class="col-12">
+					<textarea name="message" class="form-control mb-30 " placeholder="Message" ></textarea>
+				</div>
+				<div class="col-12">
+					<button type="submit" class="btn btn-outline-success">
+						Send message
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
+{% endblock %}
